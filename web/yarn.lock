@@ -8463,7 +8463,7 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
-stylus-loader@^3.0.1:
+stylus-loader@^3.0.2:
   version "3.0.2"
   resolved "http://registry.npm.taobao.org/stylus-loader/download/stylus-loader-3.0.2.tgz#27a706420b05a38e038e7cacb153578d450513c6"
   integrity sha1-J6cGQgsFo44DjnyssVNXjUUFE8Y=
