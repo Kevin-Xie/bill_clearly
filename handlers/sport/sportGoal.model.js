@@ -23,4 +23,5 @@ const SportGoalSchema = new Schema({
 })
 
 const SportGoal = mongoose.model('SportGoal', SportGoalSchema) 
-export default SportTask;
+
+export default SportGoal;
