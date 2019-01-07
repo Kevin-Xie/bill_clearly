@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
-const SportTask = new Schema({
+const SportGoalSchema = new Schema({
 	UserId: String,
 	
 	taskName: String,
@@ -21,3 +21,6 @@ const SportTask = new Schema({
 		updatedAt: 'updatedAt'
 	}
 })
+
+const SportGoal = mongoose.model('SportGoal', SportGoalSchema) 
+export default SportTask;
