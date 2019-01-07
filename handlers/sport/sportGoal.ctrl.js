@@ -1,11 +1,23 @@
+import SportGoalSevice from './sportGoal.serv';
+
 class SportGoalHandler {
 	constructor() {
 
     }
     
-    createSportGoal(req, res, next) {
-        console.log(req.body)
-        res.send('createSportGoal');
+    async createSportGoal(req, res, next) {
+        SportGoalSevice.createSportGoal(req.body)
+            .then((result) => {
+                res.json({isSuccess: true, data: result});
+            })
+            .catch(err => {
+                res.json({isSuccess: false, error: err.message});
+            })
+
+    }
+
+    getSportGoal(req, res, next) {
+
     }
 }
 

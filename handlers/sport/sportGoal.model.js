@@ -3,7 +3,11 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const SportGoalSchema = new Schema({
-	UserId: String,
+
+	userId: {
+		type: String,
+		required: true
+	},
 	
 	taskName: String,
 	
