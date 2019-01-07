@@ -4,6 +4,8 @@
  * Module dependencies.
  */
 
+require('babel-core/register');
+
 var app = require('../app');
 var debug = require('debug')('bill-clearly:server');
 var http = require('http');

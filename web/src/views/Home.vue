@@ -1,13 +1,15 @@
 <template>
-  <HelloWorld />
+  <v-container>
+    <BillList />
+  </v-container>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+  import BillList from '@/components/BillList'
 
   export default {
     components: {
-      HelloWorld
+      BillList
     }
   }
 </script>
