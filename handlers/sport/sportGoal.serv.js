@@ -1,4 +1,4 @@
-import SportGoal from './sportGoal.model';
+import SportGoalModel from './sportGoal.model';
 
 class SportGoalService {
     constructor() {
@@ -15,12 +15,20 @@ class SportGoalService {
             description: data.description
         }
 		try {
-			return await new SportGoal(newSportGoal).save()
+			return await new SportGoalModel(newSportGoal).save()
 		} catch (error) {
 			throw new Error(error);			
 		}
     }
     
+    async findByQuery(query) {
+        try {
+            let sportGoals = await SportGoalModel.find(query);
+            return sportGoals;
+        } catch (error) {
+			throw new Error(error);			            
+        }
+    }
     // async findByUserName(userName){
 	// 	try {
 	// 		let user = await UserModel.findOne({userName});
