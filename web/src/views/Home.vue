@@ -1,15 +1,15 @@
 <template>
   <v-container>
-    <BillList />
+    <Sport />
   </v-container>
 </template>
 
 <script>
-  import BillList from '@/components/BillList'
+import Sport from '@/components/Sport'
 
-  export default {
-    components: {
-      BillList
-    }
+export default {
+  components: {
+    Sport
   }
+}
 </script>

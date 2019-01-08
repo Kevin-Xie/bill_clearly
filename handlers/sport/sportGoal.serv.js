@@ -29,14 +29,6 @@ class SportGoalService {
 			throw new Error(error);			            
         }
     }
-    // async findByUserName(userName){
-	// 	try {
-	// 		let user = await UserModel.findOne({userName});
-	// 		return user;
-	// 	} catch (error) {
-	// 		throw new Error(error);			
-	// 	}
-	// };
 }
 
 export default new SportGoalService();
