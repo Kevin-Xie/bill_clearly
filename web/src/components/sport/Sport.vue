@@ -8,7 +8,6 @@
 <script>
 import NewSportGoal from '@/components/sport/NewSportGoal'
 import SportList from '@/components/sport/SportList'
-import {getSportGoal} from '@/api/sport'
 
 export default {
     name: 'Sport',
@@ -18,8 +17,14 @@ export default {
         SportList,
     },
 
-    mounted() {
-        getSportGoal();
+    computed: {
+        userId() {
+            return this.$store.getters.userId;
+        }    
+    },
+
+    created() {
+        this.$store.dispatch('getMySportGoal', this.userId);
     },
 }
 </script>

@@ -1,10 +1,9 @@
 import http from 'axios';
 
-export const getSportGoal = async () => {
-    console.log('getSportGoal')
-    http.get('/api/sports').then( (data) => {
-        console.log(data);
-    }).catch(err => {
-        console.log(err)
-    })
+export const getSportGoalByUserId = async (userId) => {
+    try {
+        return await http.get(`/api/sports?userId=${userId}`);
+    } catch (error) {
+        throw new Error(error);
+    }
 }
