@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Sport from '@/components/Sport'
+import Sport from '@/components/sport/Sport'
 
 export default {
   components: {

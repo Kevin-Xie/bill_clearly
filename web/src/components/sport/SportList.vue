@@ -2,6 +2,7 @@
     <v-data-table
     :headers="headers"
     :items="goals"
+    class="elevation-1"
     >
         <template slot="items" slot-scope="props">
             <td>{{props.item.taskName}}</td>
