@@ -1,6 +1,6 @@
 <template>
     <v-layout>
-        <!-- <new-sport-goal></new-sport-goal> -->
+        <new-sport-goal></new-sport-goal>
         <sport-list></sport-list>
     </v-layout>
 </template>

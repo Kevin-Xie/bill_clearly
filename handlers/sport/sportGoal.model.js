@@ -13,7 +13,10 @@ const SportGoalSchema = new Schema({
 	
 	target: Number,
 	
-	current: Number,
+	current: {
+		type: Number,
+		default: 0
+	},	
 	
 	unit: String,
 	
