@@ -1,38 +1,30 @@
 <template>
-    <v-data-table
-    :headers="headers"
-    :items="sportGoals"
-    class="elevation-1"
-    >
-        <template slot="items" slot-scope="props">
-            <td>{{props.item.taskName}}</td>
-            <td>{{props.item.target}}</td>
-            <td>{{props.item.current}}</td>
-            <td>{{props.item.createdAt}}</td>
-        </template>
-    </v-data-table>
+    <div>
+        <sport-goal-card v-for="goal in sportGoals" :key="goal._id" :goal="goal"></sport-goal-card>
+    </div>
 </template>
 
 <script>
+import SportGoalCard from '@/components/sport/SportGoalCard'
 export default {
     name: 'SportList',
     data() {
         return {
-            headers: [ 
-                {text: 'Goal', value: 'taskName'}, 
-                {text: 'Target', value: 'target'}, 
-                {text: 'Current', value: 'current'}, 
-                {text: 'Create Date', value: 'createdAt'}
-            ],
+            
             
         }
+    },
+    components: {
+        SportGoalCard,
     },
     computed: {
         sportGoals() {
             return this.$store.state.sportGoals;
         }
     },
-
+    mounted() {
+        console.log(this.sportGoals);
+    },
 }
 </script>
 

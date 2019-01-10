@@ -1,8 +1,8 @@
 <template>
-    <v-layout>
-        <new-sport-goal></new-sport-goal>
+    <div>
+        <!-- <new-sport-goal></new-sport-goal> -->
         <sport-list></sport-list>
-    </v-layout>
+    </div>
 </template>
 
 <script>

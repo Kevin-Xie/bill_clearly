@@ -21,7 +21,9 @@ const UserSchema = new Schema({
 		required: true
     },
     
-    salt: String,
+    salt: {
+		type: String,
+	}
 }, {
 	timestamps: {
 		createdAt: 'createdAt',

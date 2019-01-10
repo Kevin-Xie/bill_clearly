@@ -8,7 +8,7 @@ const SportHistorySchema = new Schema({
 		required: true
 	},
 	
-	amount: Number,
+	progress: Number,
 	
 	occurDate: {
 		type: Date,

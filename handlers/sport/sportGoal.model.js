@@ -9,9 +9,15 @@ const SportGoalSchema = new Schema({
 		required: true
 	},
 	
-	taskName: String,
+	taskName: {
+		type: String,
+		required: true
+	},
 	
-	target: Number,
+	target: {
+		type: Number,
+		default: 0,
+	},
 	
 	current: {
 		type: Number,
