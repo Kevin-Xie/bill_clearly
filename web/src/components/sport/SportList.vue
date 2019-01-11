@@ -1,7 +1,10 @@
 <template>
-    <div>
+    <v-layout row wrap justify-center align-center>
+        <v-flex xs12 md6>
+
         <sport-goal-card v-for="goal in sportGoals" :key="goal._id" :goal="goal"></sport-goal-card>
-    </div>
+        </v-flex>
+    </v-layout>
 </template>
 
 <script>

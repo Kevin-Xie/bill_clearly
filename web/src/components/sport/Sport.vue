@@ -1,7 +1,7 @@
 <template>
     <div>
-        <!-- <new-sport-goal></new-sport-goal> -->
         <sport-list></sport-list>
+        <new-sport-goal></new-sport-goal>
     </div>
 </template>
 

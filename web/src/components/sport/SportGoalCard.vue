@@ -1,35 +1,32 @@
 <template>
-    <v-layout row wrap justify-center align-center>
-        <v-flex xs12 md6>
-            <v-card>
-                <v-card-title>
-                    <div class="headline">{{goal.taskName}}</div>
-                </v-card-title>
-                <v-card-text>
-                    <v-layout>
-                        <v-flex xs6>
-                            <v-progress-circular
-                            :rotate="-90"
-                            :size="120"
-                            :width="15"
-                            :value="progressValue"
-                            color="primary">
-                            {{progressPercent}}
-                            </v-progress-circular>
-                        </v-flex>
-                        <v-flex xs6>
-                            <div>Target: {{goal.target}}</div>
-                            <div>Current: {{goal.current}}</div>
-                            <v-btn color="orange" flat>Detail</v-btn>
-                        </v-flex>
-                    </v-layout>
-                </v-card-text>
-                <v-card-action>
-                    <v-btn color="orange" flat>Detail</v-btn>
-                </v-card-action>
-            </v-card>
-        </v-flex>
-    </v-layout>
+    <v-card>
+        <v-card-title>
+            <div class="headline">{{goal.taskName}}</div>
+        </v-card-title>
+        <v-card-text>
+            <v-layout>
+                <v-flex xs5>
+                    <v-progress-circular
+                    :rotate="-90"
+                    :size="100"
+                    :width="15"
+                    :value="progressValue"
+                    color="primary">
+                    {{progressPercent}}
+                    </v-progress-circular>
+                </v-flex>
+                <v-flex xs7 align-self-center>
+                    <div class="headline font-weight-light">Target: {{goal.target}}</div>
+                    <div class="headline font-weight-light">Current: {{goal.current}}</div>
+                </v-flex>
+            </v-layout>
+        </v-card-text>
+        <!-- <v-card-actions>
+            <v-layout justify-end>
+                <v-btn color="orange" flat>Detail</v-btn>
+            </v-layout>
+        </v-card-actions> -->
+    </v-card>
 </template>
 
 <script>

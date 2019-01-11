@@ -1,6 +1,8 @@
 <template>
     <v-dialog v-model="dialog" persistent max-width="600px">
-      <v-btn slot="activator" color="primary" dark>Add</v-btn>
+       <v-btn fab dark color="indigo" slot="activator" fixed right bottom>
+        <v-icon dark>add</v-icon>
+      </v-btn>
       <v-card>
         <v-card-title>
           <span class="headline">Add New Goal</span>

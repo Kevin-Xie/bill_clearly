@@ -23,10 +23,11 @@ export default new Vuex.Store({
   },
 
   actions: {
-    getMySportGoal({commit}, userId) {
+    getMySportGoal(context) {
+	  let userId = context.getters.userId;
       getSportGoalByUserId(userId).then(({data}) => {
         if(data.isSuccess)
-          commit('addSportGoals', data.data)
+          context.commit('addSportGoals', data.data)
       }).catch(err => {
         console.log(err);
       })
